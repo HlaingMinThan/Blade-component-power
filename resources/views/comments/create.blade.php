@@ -1,5 +1,5 @@
 <x-layout>
-    <x-form action="/comments/{{$comment->id}}/update" method="PATCH">
+    <x-form action="/comments/store" method="POST">
             <div class="mb-6">
                 <label class="block mb-2 uppercase font-bold text-xs text-gray-700"
                         for="body"
@@ -11,7 +11,7 @@
                             name="body"
                             id="body"
                             required
-                >{{$comment->body}}</textarea>
+                ></textarea>
         
                 @error('body')
                     <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
@@ -21,9 +21,8 @@
                     <button type="submit"
                             class="bg-blue-400 text-white rounded py-2 px-4 hover:bg-blue-500"
                     >
-                        update
+                        submit
                     </button>
-                    <a href="/comments" class="bg-gray-400 text-white rounded  px-5 py-3 hover:bg-gray-600">Back</a>
             </div>
     </x-form>
 </x-layout>
