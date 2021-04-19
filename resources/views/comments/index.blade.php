@@ -5,10 +5,10 @@
 
             <p class="my-3 text-blue-500"><span class="text-gray-800 mr-4">{{$comment->id}}</span>{{$comment->body}}</p>
 
-            <x-form action="{{route('comments.delete',$comment->id)}}" method="DELETE">
-                <a href="/comments/{{$comment->id}}/edit" class="text-green-500 ml-5">edit</a>
-                <button type="submit" class="text-red-400 ml-5">delete</button>
-            </x-form>
+            <a href="/comments/{{$comment->id}}/edit" class="text-green-500 ml-5">edit</a>
+            <x-form-button class="text-red-400 ml-5" action="{{route('comments.delete',$comment->id)}}" method="DELETE">
+                Delete
+            </x-form-button>
             
         </div>
     @endforeach
