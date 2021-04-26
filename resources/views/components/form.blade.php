@@ -1,10 +1,13 @@
 @props([
-    'method'=>'GET',
+'method'=>'GET',
 ])
-<form  method="{{$method==='GET'?'GET':'POST'}}" {{$attributes}}>
+<form
+    method="{{$method==='GET'?'GET':'POST'}}"
+    {{$attributes}}
+>
     @csrf
     @if ($method==='PATCH' || $method==="DELETE")
-        @method($method)
+    @method($method)
     @endif
     {{$slot}}
 </form>
