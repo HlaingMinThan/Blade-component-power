@@ -19,11 +19,11 @@
     ></script>
 </head>
 
-<body class="p-10">
+<body>
 
-    <h1 class="text-3xl text-blue-500 text-center">
+    {{-- <h1 class="text-3xl text-blue-500 text-center">
         Blade Component Learning
-    </h1>
+    </h1> --}}
 
     {{$slot}}
 

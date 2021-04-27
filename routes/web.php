@@ -5,7 +5,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('dashboard');
+Route::view('/team', 'welcome')->name('team');
+Route::view('/projects', 'welcome')->name('projects');
 
 Route::get('/comments/', function () {
     return view('comments.index', ['comments' => Comment::all()]);
